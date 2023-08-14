@@ -23,7 +23,12 @@ export default {
       '2xl': '4000px',
       // => @media (min-width: 1536px) { ... }
     }},
-  
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('https://iili.io/HDh2O41.png')",
+       
+      }
+    }
   },
   plugins: [],
 }
