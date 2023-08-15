@@ -20,7 +20,7 @@ function Hero() {
     </div>
         <div className='flex flex-col justify-center items-center pt-24 md:pt-24 lg:pt-24'>
            <div className='flex flex-col text-center text-white text-3xl mx-2 gap-4  lg:text-5xl'>
-                <p className='font-bold'><span className='text-yellow-400'>Cinematic </span>Bliss Awaits:</p>
+                <p className='font-bold'><span className='text-yellow-400'>Cinematic </span>Pleasure Awaits:</p>
                 <p className='font-bold' >Stream the Magic, Feel the <span className='text-yellow-400'>Story</span>.</p>
                 <p className='text-white text-base '>Welcome to your streaming escape!</p>
            </div>

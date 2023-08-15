@@ -28,10 +28,10 @@ function MovieCard() {
     <>
     <div className=' bg-black py-10'>
     <p className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Popular Movies</p>
-    <div className='grid grid-cols-2 gap-5 px-5  justify-center lg:grid lg:grid-cols-5 lg:px-28'>
+    <div className='grid grid-cols-2 gap-5 px-5  justify-center md:px-20 lg:grid lg:grid-cols-5 lg:px-28'>
    
      {movies.map((movie)=>(
-             <div key={movie.id}>
+             <div className='cursor-pointer' key={movie.id}>
                 <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
                {/* <p className='w-full text-white  overflow-ellipsis  line-clamp-2'>  {movie.title}</p> */}
              </div>
