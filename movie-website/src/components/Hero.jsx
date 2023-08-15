@@ -22,7 +22,7 @@ function Hero() {
            <div className='flex flex-col text-center text-white text-3xl mx-2 gap-4  lg:text-5xl'>
                 <p className='font-bold'><span className='text-yellow-400'>Cinematic </span>Bliss Awaits:</p>
                 <p className='font-bold' >Stream the Magic, Feel the <span className='text-yellow-400'>Story</span>.</p>
-                <p className='text-yellow-400 text-base '>Welcome to your streaming escape!</p>
+                <p className='text-white text-base '>Welcome to your streaming escape!</p>
            </div>
              <div className='mt-10 flex flex-col justify-center  gap-4 items-center md:flex md:flex-row lg:flex lg:flex-row md:gap-0 lg:gap-0'>
                  <input className=' overflow-hidden w-[300px] md:w-[400px] lg:w-[500px] md:h-12 lg:h-12 px-4 py-2 outline-none rounded-s-sm' type="text" placeholder='Search......' />
