@@ -35,9 +35,22 @@ function MovieCard() {
                 <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
                {/* <p className='w-full text-white  overflow-ellipsis  line-clamp-2'>  {movie.title}</p> */}
              </div>
+
+             
         ))}
         </div>
+       
+        {/* {movies.slice(0,1).map((movie)=>(
+              <div className='flex justify-center'>
+              <iframe className='w-4/5 aspect-video' src={`https://autoembed.to/movie/tmdb/${movie.id}`}  frameborder="0"></iframe>
+              </div>
+      
+             
+        ))} */}
+        
         </div>
+       
+       
 </>
 
   )
