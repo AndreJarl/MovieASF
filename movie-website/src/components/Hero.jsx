@@ -1,5 +1,5 @@
 import React from 'react'
-import cover from "../assets/movie.jpg"
+import { Link } from 'react-router-dom'
 
 
 function Hero() {
@@ -12,7 +12,7 @@ function Hero() {
                    <p className='text-2xl font-bold text-red-600 sm:text-3xl lg:text-4xl cursor-pointer bg-gray-50 rounded-md px-2 py-2'>MOVIEASF</p>
              </div>
              <div className='flex items-center gap-4 font-medium text-sm sm:text-base sm:gap-4  text-yellow-400 lg:text-lg lg:gap-10'>
-                 <p className='cursor-pointer'>Movies</p>
+                <Link to="/popular"><p className='cursor-pointer'>Movies</p></Link> 
                  <p className='cursor-pointer'>TV Shows</p>
              </div>
        </div>

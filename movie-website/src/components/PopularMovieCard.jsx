@@ -1,52 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import MovieCard from './MovieCard';
 
-const url = "https://api.themoviedb.org/3/movie/popular?api_key=011f0f826110309514b3e9231867614e";
 
-function MovieCard() {
+
+function PopularMovieCard() {
 
     const [movies, setMovies] = useState([]);
 
-    useEffect(()=>{
-       fetchData();
-    },[])
-
-     const fetchData = async () => {
-        try{
-           const {data} = await axios.get(url);
-           const slice = data.results.splice(0, 10)
-           setMovies(slice);
+    useEffect(() => {
+      const url = "https://api.themoviedb.org/3/movie/popular?api_key=011f0f826110309514b3e9231867614e";
+      const options = {
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer 011f0f826110309514b3e9231867614e'
         }
-        catch (err){
-          throw new Error(err.message);
-        }
-    }
+      };
+  
+      axios.get(url, options)
+        .then(response => {
+          const slice = response.data.results.slice(0,10);
+          setMovies(slice);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }, []);
 
-    console.log(movies);
+
 
   return (
     <>
     <div className=' bg-black py-10'>
     <p className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Popular Movies</p>
     <div className='grid grid-cols-2 gap-5 px-5  justify-center md:px-20 lg:grid lg:grid-cols-5 lg:px-28'>
-   
-     {movies.map((movie)=>(
-             <div className='cursor-pointer' key={movie.id}>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
-               {/* <p className='w-full text-white  overflow-ellipsis  line-clamp-2'>  {movie.title}</p> */}
-             </div>
-
-             
+      {movies.map((movie)=>(
+            <MovieCard key={movie.id} movies={movie}/>
         ))}
+
+   
         </div>
        
-        {/* {movies.slice(0,1).map((movie)=>(
-              <div className='flex justify-center'>
-              <iframe className='w-4/5 aspect-video' src={`https://autoembed.to/movie/tmdb/${movie.id}`}  frameborder="0"></iframe>
-              </div>
       
-             
-        ))} */}
         
         </div>
        
@@ -56,4 +51,4 @@ function MovieCard() {
   )
 }
 
-export default MovieCard
+export default PopularMovieCard
