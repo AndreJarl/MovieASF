@@ -3,8 +3,8 @@ import React from 'react'
 function InfoPage({infos}) {
   return (
     
-    <div key={infos.id}  className='flex flex-col py-5 px-5 justify-center items-center bg-black text-white md:flex md:flex-row lg:pt-20 lg:pb-20' >
-        <div className='flex justify-center items-center px-5'>
+    <div key={infos.id}  className='flex flex-col  px-5 justify-center items-center bg-black text-white md:flex md:flex-row lg:pt-20 lg:pb-20' >
+        <div className='flex justify-center items-center px-5 pt-9 lg:pt-0'>
         <img className='w-full md:w-40 lg:w-[300px]' src={`https://image.tmdb.org/t/p/w500/${infos.poster_path}`} alt="" />
         </div>
         <div>
