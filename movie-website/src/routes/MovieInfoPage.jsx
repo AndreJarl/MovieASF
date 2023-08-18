@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import InfoPage from '../components/InfoPage';
+import MovieVideo from '../components/MovieVideo';
 
 function MovieInfoPage() {
 
@@ -41,10 +42,10 @@ function MovieInfoPage() {
       }
 
   return (
-    <div>
+    <div className='bg-black'>
        
         <InfoPage key={movies.id} infos={movies} />
-      
+        <MovieVideo id={id} />
     </div>
   )
 }

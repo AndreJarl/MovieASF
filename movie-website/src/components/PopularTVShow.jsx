@@ -43,14 +43,7 @@ function PopularTVShows() {
              
         ))}
         </div>
-       
-        {/* {movies.slice(0,1).map((movie)=>(
-              <div className='flex justify-center'>
-              <iframe className='w-4/5 aspect-video' src={`https://autoembed.to/movie/tmdb/${movie.id}`}  frameborder="0"></iframe>
-              </div>
       
-             
-        ))} */}
         
         </div>
        
