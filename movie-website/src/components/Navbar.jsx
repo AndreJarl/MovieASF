@@ -6,7 +6,7 @@ function Navbar() {
   return (
 
     <div className='flex justify-center items-center bg-transparent  text-white pt-5  '>
-            <div className='flex  justify-center items-center overflow-hidden  gap-14 md:gap-[400px] lg:gap-[450px]'>
+            <div className='flex  justify-center items-center overflow-hidden  gap-14 md:gap-[400px] lg:gap-[500px]'>
                 <div className='logo'> 
                         <Link to='/'><p className='text-2xl font-bold text-red-600 sm:text-3xl lg:text-4xl cursor-pointer bg-gray-50 rounded-md px-2 py-2'>MOVIEASF</p></Link>
                 </div>
