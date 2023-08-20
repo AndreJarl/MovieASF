@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import MovieCard from './MovieCard';
+import TVCard from './TVCard';
 
 
 
@@ -39,7 +39,7 @@ function PopularTVShows() {
     <div className='grid grid-cols-2 gap-5 px-5  justify-center md:px-20 lg:grid lg:grid-cols-5 lg:px-28'>
    
      {movies.map((movie)=>(
-             <MovieCard key={movie.id} movies={movie} />
+            <TVCard key={movie.id} movies={movie}/>
              
         ))}
         </div>

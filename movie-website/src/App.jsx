@@ -4,6 +4,8 @@ import Home from './Home';
 import Popular from './routes/Popular';
 import TVShows from './routes/TVShows';
 import MovieInfoPage from './routes/MovieInfoPage';
+import TVInfoPage from './routes/TVInfoPage';
+import Search from './routes/Search';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Route path="/popular" element={<Popular />} />
       <Route path="/tvshows" element={<TVShows />} />
       <Route path="/movieinfo/:id" element={<MovieInfoPage />} />
+      <Route path="/tvshowinfo/:id" element={<TVInfoPage />} />
+      <Route path="/search/:id" element={<Search />} />
     </Routes>
   );
 }

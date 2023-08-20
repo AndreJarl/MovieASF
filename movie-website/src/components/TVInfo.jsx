@@ -1,6 +1,7 @@
 import React from 'react'
+import { AiFillStar } from 'react-icons/ai';
 
-function InfoPage({infos}) {
+function TVInfo({infos}) {
   return (
     
     <div key={infos.id}  className='flex flex-col  px-5 justify-center items-center bg-black text-white md:flex md:flex-row md:py-10 lg:pt-20 lg:pb-20' >
@@ -9,7 +10,7 @@ function InfoPage({infos}) {
         </div>
         <div>
             <div className='flex flex-col justify-center items-center mt-2'>
-                <p className='mb-5 text-4xl font-bold text-left md:text-2xl lg:w-[500px] lg:text-4xl'>{infos.title}{infos.original_name}</p>
+                <p className='mb-5 text-4xl font-bold text-left md:text-left md:text-2xl lg:w-[500px] lg:text-4xl'>{infos.original_name}</p>
               
                 <div className='flex gap-4 justify-start'>
                     {infos.genres.map((genre)=>(
@@ -22,9 +23,9 @@ function InfoPage({infos}) {
                 </div>
               
                 <div className='mx-4 flex gap-2 text-yellow-400 py-4 ml-7'>
-                  <p className='border rounded px-2 md:text-xs'>{infos.runtime}</p>
-                  <p className='border rounded px-2 md:text-xs'>{infos.vote_average}</p>
-                  <p className='border rounded px-2 md:text-xs'>{infos.release_date}</p>
+                  <p className='border rounded px-2 md:text-xs'>{infos.status}</p>
+                  <p className='border rounded px-2 md:text-xs  flex items-center gap-1'><AiFillStar/> {infos.vote_average}</p>
+                  <p className='border rounded px-2 md:text-xs'> {infos.origin_country}</p>
                 </div>
            
             
@@ -34,4 +35,4 @@ function InfoPage({infos}) {
   )
 }
 
-export default InfoPage
+export default TVInfo

@@ -8,10 +8,10 @@ function Footer() {
        <div className="flex flex-col content-between items-center gap-3 mb-5 mt-4 lg:flex lg:flex-row lg:gap-72 text-white">
             
                 <div className="">
-                  <h1 className='text-4xl font-bold'>ANIMEASF</h1>
+                  <h1 className='text-4xl font-bold text-red-500'>MOVIEASF</h1>
                 </div>
               
-                <div className='flex gap-5'>
+                <div className='flex gap-5 '>
                     <a href=""><h1 className='text-4xl'><AiFillLinkedin/></h1></a>
                     <a href="https://www.facebook.com/profile.php?id=100078410717230"><h1 className='text-4xl'><AiFillFacebook/></h1></a>
                     <a href="https://github.com/AndreJarl/AnimeASFF"><h1 className='text-4xl'><AiFillGithub /></h1></a>

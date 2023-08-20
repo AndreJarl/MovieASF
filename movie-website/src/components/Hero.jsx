@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 function Hero() {
+
+  const [query, setQuery] = useState("");
+
+
   return (
     <div className='h-[659px] pt-5  bg-hero-pattern bg-cover' >
 
@@ -24,10 +28,19 @@ function Hero() {
                 <p className='font-bold' >Stream the Magic, Feel the <span className='text-yellow-400'>Story</span>.</p>
                 <p className='text-white text-base '>Welcome to your streaming escape!</p>
            </div>
-             <div className='mt-10 flex flex-col justify-center  gap-4 items-center md:flex md:flex-row lg:flex lg:flex-row md:gap-0 lg:gap-0'>
-                 <input className=' overflow-hidden w-[300px] md:w-[400px] lg:w-[500px] md:h-12 lg:h-12 px-4 py-2 outline-none rounded-s-sm' type="text" placeholder='Search......' />
-                 <p className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p>
+         
+           <div className='mt-10 flex flex-col justify-center  gap-4 items-center md:flex md:flex-row lg:flex lg:flex-row md:gap-0 lg:gap-0'>
+                 <input className=' overflow-hidden w-[300px] md:w-[400px] lg:w-[500px] md:h-12 lg:h-12 px-4 py-2 outline-none rounded-s-sm' type="text" placeholder='Search......'
+                  value={query} onChange={(event)=>setQuery(event.target.value)}
+                 />
+                 {query.trim() !== "" ? 
+                 (<Link to='/search/:id'><p onClick={()=>setQuery(" ")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p></Link>)
+                 : (<p onClick={()=>setQuery(" ")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p>)
+
+                }
+            
              </div>
+           
         </div>
     </div>
   )

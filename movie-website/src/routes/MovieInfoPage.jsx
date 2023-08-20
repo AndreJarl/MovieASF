@@ -6,6 +6,7 @@ import axios from 'axios';
 import InfoPage from '../components/InfoPage';
 import MovieVideo from '../components/MovieVideo';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'
 
 function MovieInfoPage() {
 
@@ -47,6 +48,7 @@ function MovieInfoPage() {
         <Navbar/>
         <InfoPage key={movies.id} infos={movies} />
         <MovieVideo id={id} />
+        <Footer />
     </div>
   )
 }
