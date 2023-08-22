@@ -34,8 +34,8 @@ function Hero() {
                   value={query} onChange={(event)=>setQuery(event.target.value)}
                  />
                  {query.trim() !== "" ? 
-                 (<Link to='/search/:id'><p onClick={()=>setQuery(" ")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p></Link>)
-                 : (<p onClick={()=>setQuery(" ")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p>)
+                 (<Link to={`/search/${query}`} ><p onClick={()=>setQuery(" ")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p></Link>)
+                 : (<p onClick={()=>setQuery("")} className='bg-red-600 py-3 px-4  text-white font-medium rounded-e-sm cursor-pointer'>Search > </p>)
 
                 }
             

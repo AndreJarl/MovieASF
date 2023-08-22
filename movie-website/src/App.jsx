@@ -15,7 +15,7 @@ function App() {
       <Route path="/tvshows" element={<TVShows />} />
       <Route path="/movieinfo/:id" element={<MovieInfoPage />} />
       <Route path="/tvshowinfo/:id" element={<TVInfoPage />} />
-      <Route path="/search/:id" element={<Search />} />
+      <Route path="/search/:query" element={<Search />} />
     </Routes>
   );
 }
