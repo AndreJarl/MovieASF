@@ -5,7 +5,7 @@ import axios from 'axios';
 import MovieCard from '../components/MovieCard';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
-
+import None from '../assets/no.png'
 function Search() {
 
     const {query} = useParams();
@@ -34,9 +34,13 @@ function Search() {
 
     if(movies.length === 0){
        return (
-          <div>
-               <p className='text-black text-6xl text-center mt-40 '>Loading...........</p>
-          </div>
+        <div className='bg-black'>
+ 
+        <Hero/>
+         <p className='text-center text-3xl my-10 text-red-700'>{movies.length} results found for {query}.....</p>
+         <div className='flex justify-center items-center pb-5'><img width={500} src={None} alt="" srcset="" /></div>
+        <Footer/>    
+            </div>
         )
     }
 
