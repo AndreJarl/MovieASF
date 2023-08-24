@@ -16,8 +16,8 @@ function Hero() {
                    <Link to={'/'}><p className='text-2xl font-bold text-red-600 sm:text-3xl lg:text-4xl cursor-pointer bg-gray-50 rounded-md px-2 py-2'>MOVIEASF</p></Link>
              </div>
              <div className='flex items-center gap-4 font-medium text-sm sm:text-base sm:gap-4  text-yellow-400 lg:text-lg lg:gap-10'>
-                <Link to="/popular"><p className='cursor-pointer'>Movies</p></Link> 
-                 <p className='cursor-pointer'>TV Shows</p>
+                <Link to="/movies"><p className='cursor-pointer'>Movies</p></Link> 
+                <Link to="/tvshows"><p className='cursor-pointer'>TV Shows</p></Link> 
              </div>
        </div>
 
