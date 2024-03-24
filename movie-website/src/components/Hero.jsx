@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import bgImage from '../assets/movie.jpg'
 
 function Hero() {
 
@@ -8,7 +8,7 @@ function Hero() {
 
 
   return (
-    <div className='h-[659px] pt-5  bg-hero-pattern bg-cover' >
+    <div className='h-[659px] pt-5  bg-hero-pattern bg-cover' style={{backgroundImage: `url(${bgImage})`}} >
 
           <div className='flex justify-center items-center bg-transparent h-20 text-white   '>
        <div className='flex  justify-center items-center overflow-hidden  gap-14 md:gap-[400px] lg:gap-[600px]'>
