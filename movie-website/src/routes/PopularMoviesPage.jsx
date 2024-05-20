@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { BsArrowLeft, BsArrowRight} from 'react-icons/bs';
 
 
-function TVShows() {
+function PopularMoviesPage() {
 
     const [movies, setMovies] = useState([]);
     
@@ -20,7 +20,7 @@ function TVShows() {
      setCount((count)=> (count > 1 ? count-1 : count))
   }
 
-
+  
     useEffect(() => {
       const options = {
         method: 'GET',
@@ -30,7 +30,7 @@ function TVShows() {
         }
       };
       
-      fetch(`https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${count}`, options)
+      fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${count}`, options)
         .then(response => response.json())
         .then(response => setMovies(response.results))
         .catch(err => console.error(err));
@@ -43,7 +43,7 @@ function TVShows() {
       
       <Navbar />
       <div className=' bg-black py-10'>
-      <p   className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Top Rated</p>
+      <p   className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Popular</p>
       <div className='grid grid-cols-2 gap-5 px-5  justify-center md:px-20 lg:grid lg:grid-cols-5 lg:px-28'>
         {movies.map((movie)=>(
               <MovieCard key={movie.id} movies={movie}/>
@@ -65,4 +65,4 @@ function TVShows() {
     )
 }
 
-export default TVShows
+export default PopularMoviesPage

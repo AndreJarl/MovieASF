@@ -5,14 +5,15 @@ import TVShows from './routes/TVShows';
 import MovieInfoPage from './routes/MovieInfoPage';
 import TVInfoPage from './routes/TVInfoPage';
 import Search from './routes/Search';
-import MoviesPage from './routes/MoviesPage';
+import PopularMoviesPage from './routes/PopularMoviesPage';
+import TopRatedPage from './routes/TopRatedPage';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/movies" element={<MoviesPage />} />
-      <Route path="/tvshows" element={<TVShows />} />
+      <Route path="/movies" element={<PopularMoviesPage />} />
+      <Route path="/toprated" element={<TopRatedPage />} />
       <Route path="/movieinfo/:id" element={<MovieInfoPage />} />
       <Route path="/tvshowinfo/:id" element={<TVInfoPage />} />
       <Route path="/search/:query" element={<Search />} />

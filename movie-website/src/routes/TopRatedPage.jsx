@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { BsArrowLeft, BsArrowRight} from 'react-icons/bs';
 
 
-function MoviesPage() {
+function TopRatedPage() {
 
     const [movies, setMovies] = useState([]);
     
@@ -30,7 +30,7 @@ function MoviesPage() {
         }
       };
       
-      fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${count}`, options)
+      fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${count}`, options)
         .then(response => response.json())
         .then(response => setMovies(response.results))
         .catch(err => console.error(err));
@@ -43,7 +43,7 @@ function MoviesPage() {
       
       <Navbar />
       <div className=' bg-black py-10'>
-      <p   className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Now Playing</p>
+      <p   className='text-yellow-400 text-center pb-10 text-5xl font-bold '>Top Rated</p>
       <div className='grid grid-cols-2 gap-5 px-5  justify-center md:px-20 lg:grid lg:grid-cols-5 lg:px-28'>
         {movies.map((movie)=>(
               <MovieCard key={movie.id} movies={movie}/>
@@ -65,4 +65,4 @@ function MoviesPage() {
     )
 }
 
-export default MoviesPage
+export default TopRatedPage
