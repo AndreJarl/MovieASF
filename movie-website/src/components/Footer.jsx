@@ -18,7 +18,7 @@ function Footer() {
                 </div>
 
          </div>
-         <p style={{fontSize: '13px', textAlign: 'center', color: 'white'}}>created by Andre Jarl 2023</p>
+         <p style={{fontSize: '13px', textAlign: 'center', color: 'white'}}>created by Andre Jarl</p>
          <div className='text-xs text-white text-center mt-5 mx-1 lg:mx-40 '> 
                     <p>Disclaimer: The content presented on this website is intended for educational purposes only. All rights and copyrights to the original owners and creators of the materials are duly acknowledged and respected. This website does not claim ownership or endorse any unauthorized use of copyrighted content.</p>
         </div>
